@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio de Açaí</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍧 Cardápio de Açaí</h1>
+  </header>
+
+  <main>
+    <!-- Escolha do tamanho -->
+    <section class="copos">
+      <h2>Escolha o tamanho</h2>
+      <div class="opcoes-copos">
+        <div class="copo" onclick="selecionarCopo('300ml', 15)">
+          <img src="https://i.ibb.co/4T0Wgxk/copo300.png" alt="Copo 300ml">
+          <p>300ml - R$15,00</p>
+        </div>
+        <div class="copo" onclick="selecionarCopo('500ml', 24)">
+          <img src="https://i.ibb.co/S7qztcC/copo500.png" alt="Copo 500ml">
+          <p>500ml - R$24,00</p>
+        </div>
+        <div class="copo" onclick="selecionarCopo('700ml', 34)">
+          <img src="https://i.ibb.co/3MS95Gs/copo700.png" alt="Copo 700ml">
+          <p>700ml - R$34,00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adicionais grátis -->
+    <section>
+      <h2>Adicionais Grátis (máx. 4)</h2>
+      <div class="adicionais">
+        <label><input type="checkbox" class="gratis" value="Banana"> Banana</label>
+        <label><input type="checkbox" class="gratis" value="Leite Condensado"> Leite Condensado</label>
+        <label><input type="checkbox" class="gratis" value="Oreo"> Oreo</label>
+        <label><input type="checkbox" class="gratis" value="Granola"> Granola</label>
+        <label><input type="checkbox" class="gratis" value="Paçoca"> Paçoca</label>
+        <label><input type="checkbox" class="gratis" value="Ninho"> Ninho</label>
+      </div>
+    </section>
+
+    <!-- Adicionais pagos -->
+    <section>
+      <h2>Adicionais Pagos</h2>
+      <div class="adicionais">
+        <label><input type="checkbox" class="pago" value="Nutella" data-preco="3"> Nutella (+R$3,00)</label>
+        <label><input type="checkbox" class="pago" value="Doce de Leite" data-preco="2"> Doce de Leite (+R$2,00)</label>
+        <label><input type="checkbox" class="pago" value="Ouro Branco" data-preco="3"> Ouro Branco (+R$3,00)</label>
+        <label><input type="checkbox" class="pago" value="Sonho de Valsa" data-preco="3"> Sonho de Valsa (+R$3,00)</label>
+        <label><input type="checkbox" class="pago" value="Creme de Ninho" data-preco="3"> Creme de Ninho (+R$3,00)</label>
+        <label><input type="checkbox" class="pago" value="Creme de Oreo" data-preco="3.5"> Creme de Oreo (+R$3,50)</label>
+      </div>
+    </section>
+
+    <!-- Total -->
+    <section>
+      <h2>Total</h2>
+      <p id="total">R$0,00</p>
+    </section>
+
+    <!-- Dados do cliente -->
+    <section>
+      <h2>Seus dados</h2>
+      <input type="text" id="nome" placeholder="Seu nome">
+      <input type="text" id="endereco" placeholder="Seu endereço">
+      <input type="text" id="pagamento" placeholder="Forma de pagamento (Pix, Cartão, Dinheiro)">
+    </section>
+
+    <!-- Botão Confirmar -->
+    <button onclick="enviarPedido()">Confirmar Pedido</button>
+  </main>
+
+  <!-- Som de bolha -->
+  <audio id="somClick" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
